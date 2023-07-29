@@ -1,0 +1,71 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Single Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      animation: move 2s linear infinite;
+    }
+    
+    @keyframes move {
+      0% { left: 0; top: 0; }
+      50% { left: 200px; top: 200px; }
+      100% { left: 0; top: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+      .mouth {
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    border-bottom: none;
+    position: relative;
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+.mouth::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: #FFF;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouth::after {
+    content: "";
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -15px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="mouth"></div>
+</body>
+</html>
